@@ -1307,7 +1307,7 @@ def create_pdf(product_name,filename,begin_date_str,end_date_str):
     # folders = [folder for folder in os.listdir(directory_path) if folder == product_name]
     # streamlit.write(folders)
     #streamlit.write('folders',folders)
-    filename = ['https://raw.githubusercontent.com/Snigdhab26/Capstone/main/Drug/DUMMYDRUG/DUMMYDRUG_2_WWMA.xlsx','https://raw.githubusercontent.com/Snigdhab26/Capstone/main/Drug/DUMMYDRUG/DUMMYDRUG_3_Actions taken in the reporting interval for safety reasons.docx','https://raw.githubusercontent.com/Snigdhab26/Capstone/main/Drug/DUMMYDRUG/DUMMYDRUG_4Changes to reference safety information.docx','https://raw.githubusercontent.com/Snigdhab26/Capstone/main/Drug/DUMMYDRUG/DUMMYDRUG_Core Data Sheet_CDS.docx','https://raw.githubusercontent.com/Snigdhab26/Capstone/main/Drug/DUMMYDRUG/DUMMYDRUG_RMP.pdf']
+    filename = ['Drug/DUMMYDRUG/DUMMYDRUG_2_WWMA.xlsx','Drug/DUMMYDRUG/DUMMYDRUG_3_Actions taken in the reporting interval for safety reasons.docx','Drug/DUMMYDRUG/DUMMYDRUG_4Changes to reference safety information.docx','Drug/DUMMYDRUG/DUMMYDRUG_Core Data Sheet_CDS.docx','Drug/DUMMYDRUG/DUMMYDRUG_RMP.pdf']
     # if len(folders) > 0:
     #     target_dir = os.path.join(directory_path, folders[0])
     #     last_directory_path, last_directory_files = get_last_directory_files(target_dir)
@@ -1328,9 +1328,10 @@ def create_pdf(product_name,filename,begin_date_str,end_date_str):
        file_name_only = os.path.basename(f)
        print(streamlit.write(f"{i}. {file_name_only}"))
     # df = pd.read_excel("/content/Excel.xlsx")
-    df2 = pd.read_excel("https://raw.githubusercontent.com/Snigdhab26/Capstone/main/Excel.xlsx",sheet_name='Sheet2')  # ("/content/Excel.xlsx")
+    df2 = pd.read_excel("Excel.xlsx",sheet_name='Sheet2')
+    #("https://raw.githubusercontent.com/Snigdhab26/Capstone/main/Excel.xlsx",sheet_name='Sheet2')  # ("/content/Excel.xlsx")
 
-    df1 = pd.read_excel("https://raw.githubusercontent.com/Snigdhab26/Capstone/main/Excel.xlsx", sheet_name='Sheet1')
+    df1 = pd.read_excel("Excel.xlsx", sheet_name='Sheet1')
     df1 = df1.fillna('')
 
     marketed = 0
