@@ -1293,35 +1293,35 @@ def create_pdf(product_name,filename,begin_date_str,end_date_str):
     # streamlit.session_state['Start'] = True
     #directory_path = "/content/drive/MyDrive/ISB /Capstone/Data"
     streamlit.write("Select Product for PSUR: ", product_name)
-    directory_path = os.getcwd()
-    directory_path = os.path.join(directory_path, 'Drugs')
-    #streamlit.write(directory_path)
-    #directory_path = '/Users/harishbalajim/Documents/ISB AMPBA/Capstone Project/Drugs'
-    Products = [folder for folder in os.listdir(directory_path)]
-    #product_name = input('Please enter Product Name: ')
-    # directory_path = os.path.join(directory_path,product_name.title())
-    #Products = [folder for folder in os.listdir(directory_path)]
-    #streamlit.write("Select Product for PSUR: ", Products)
-    # streamlit.write('directory_path', directory_path)
-    # streamlit.write(product_name)
-    folders = [folder for folder in os.listdir(directory_path) if folder == product_name]
+    # directory_path = os.getcwd()
+    # directory_path = os.path.join(directory_path, 'Drugs')
+    # #streamlit.write(directory_path)
+    # #directory_path = '/Users/harishbalajim/Documents/ISB AMPBA/Capstone Project/Drugs'
+    # Products = [folder for folder in os.listdir(directory_path)]
+    # #product_name = input('Please enter Product Name: ')
+    # # directory_path = os.path.join(directory_path,product_name.title())
+    # #Products = [folder for folder in os.listdir(directory_path)]
+    # #streamlit.write("Select Product for PSUR: ", Products)
+    # # streamlit.write('directory_path', directory_path)
+    # # streamlit.write(product_name)
+    # folders = [folder for folder in os.listdir(directory_path) if folder == product_name]
     # streamlit.write(folders)
     #streamlit.write('folders',folders)
-    filename = []
-    if len(folders) > 0:
-        target_dir = os.path.join(directory_path, folders[0])
-        last_directory_path, last_directory_files = get_last_directory_files(target_dir)
+    filename = ['https://raw.githubusercontent.com/Snigdhab26/Capstone/main/Drug/DUMMYDRUG/DUMMYDRUG_2_WWMA.xlsx','https://raw.githubusercontent.com/Snigdhab26/Capstone/main/Drug/DUMMYDRUG/DUMMYDRUG_3_Actions taken in the reporting interval for safety reasons.docx','https://raw.githubusercontent.com/Snigdhab26/Capstone/main/Drug/DUMMYDRUG/DUMMYDRUG_4Changes to reference safety information.docx','https://raw.githubusercontent.com/Snigdhab26/Capstone/main/Drug/DUMMYDRUG/DUMMYDRUG_Core Data Sheet_CDS.docx','https://raw.githubusercontent.com/Snigdhab26/Capstone/main/Drug/DUMMYDRUG/DUMMYDRUG_RMP.pdf']
+    # if len(folders) > 0:
+    #     target_dir = os.path.join(directory_path, folders[0])
+    #     last_directory_path, last_directory_files = get_last_directory_files(target_dir)
 
-        if last_directory_files:
-            # print("Files in the last directory:", last_directory_path)
-            for file in last_directory_files:
-                # print(file)
-                filename.append(os.path.join(last_directory_path, file))
-                #streamlit.write('FILENAME',filename)
-        else:
-            streamlit.write("No files found in the last directory.")
-    else:
-        streamlit.write("Product directory not found.")
+    #     if last_directory_files:
+    #         # print("Files in the last directory:", last_directory_path)
+    #         for file in last_directory_files:
+    #             # print(file)
+    #             filename.append(os.path.join(last_directory_path, file))
+    #             #streamlit.write('FILENAME',filename)
+    #     else:
+    #         streamlit.write("No files found in the last directory.")
+    # else:
+    #     streamlit.write("Product directory not found.")
     
     streamlit.write("Files are : \n ")
     for i, f in enumerate(filename,1):
