@@ -1442,25 +1442,25 @@ def create_pdf(product_name,filename,begin_date_str,end_date_str):
 
 
 
-        if 'ABBREVIATIONS' in content:
-            # print(filename)
-            # print(product_name)
-            # print(output_path)
-            print(content.upper())
-            streamlit.write(content.upper())
-            DF = pdf.Abbreviations('ABBREVIATIONS', output_path, filename)
-            docx_file = pdf.create_docx('',content.upper(),df=DF)
-            if streamlit.download_button(
-            label="Download {}".format(content.upper()),
-            data=docx_file,
-            file_name="{}.docx".format(content),  # Use a safe part of the content for the filename
-            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-            key="{}_button".format(content)
-              ):
-                  streamlit.session_state['GenerateButton'] = True
-                  streamlit.session_state['Start'] = True
-                  streamlit.session_state['Section1'] = True
-                  streamlit.session_state['Exec_Summary'] = True
+        # if 'ABBREVIATIONS' in content:
+        #     # print(filename)
+        #     # print(product_name)
+        #     # print(output_path)
+        #     print(content.upper())
+        #     streamlit.write(content.upper())
+        #     DF = pdf.Abbreviations('ABBREVIATIONS', output_path, filename)
+        #     docx_file = pdf.create_docx('',content.upper(),df=DF)
+        #     if streamlit.download_button(
+        #     label="Download {}".format(content.upper()),
+        #     data=docx_file,
+        #     file_name="{}.docx".format(content),  # Use a safe part of the content for the filename
+        #     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        #     key="{}_button".format(content)
+        #       ):
+        #           streamlit.session_state['GenerateButton'] = True
+        #           streamlit.session_state['Start'] = True
+        #           streamlit.session_state['Section1'] = True
+        #           streamlit.session_state['Exec_Summary'] = True
 
         if 'WORLDWIDE' in content:
             print(content)
