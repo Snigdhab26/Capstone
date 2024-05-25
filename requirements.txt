@@ -18,4 +18,3 @@ rouge-score
 sacrebleu
 bert-score
 jpype1
-pdfbox
