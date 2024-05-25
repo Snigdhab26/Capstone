@@ -78,7 +78,7 @@ import streamlit as st
 import new_class
 
 # base_path = '/mount/src/pythonproject1'
-base_path = 'https://raw.githubusercontent.com/Snigdhab26/Capstone/main/'
+base_path = 'https://raw.githubusercontent.com/Snigdhab26/Capstone/main'
 os.chdir(base_path)
 
 st.title('Aggregate Reporting Automated System (AggRAS)')
