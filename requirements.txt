@@ -8,7 +8,6 @@ reportlab
 poppler-utils
 PyPDF2
 python-docx
-pywin32
 textblob
 transformers
 pymed
