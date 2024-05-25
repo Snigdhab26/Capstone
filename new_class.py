@@ -678,7 +678,7 @@ class PDF(FPDF):
 
 
         # Replace 'your_file_path/filtered_articles_PSURdate.csv' with the path to your CSV file
-        file_path = '/content/drive/MyDrive/ISB /Capstone/Data/Allopurinol/filtered_articles_PSURdate.csv'
+        file_path = 'https://raw.githubusercontent.com/Snigdhab26/Capstone/main/filtered_articles_PSURdate.csv'
         desired_filename = 'filtered_articles_PSURdate.csv'
         for f in filename:
             # Extract the filename from the full path
@@ -1328,9 +1328,9 @@ def create_pdf(product_name,filename,begin_date_str,end_date_str):
        file_name_only = os.path.basename(f)
        print(streamlit.write(f"{i}. {file_name_only}"))
     # df = pd.read_excel("/content/Excel.xlsx")
-    df2 = pd.read_excel("/content/drive/MyDrive/ISB /Capstone/Data/Excel.xlsx",sheet_name='Sheet2')  # ("/content/Excel.xlsx")
+    df2 = pd.read_excel("https://raw.githubusercontent.com/Snigdhab26/Capstone/main/Excel.xlsx",sheet_name='Sheet2')  # ("/content/Excel.xlsx")
 
-    df1 = pd.read_excel("/content/drive/MyDrive/ISB /Capstone/Data/Excel.xlsx", sheet_name='Sheet1')
+    df1 = pd.read_excel("https://raw.githubusercontent.com/Snigdhab26/Capstone/main/Excel.xlsx", sheet_name='Sheet1')
     df1 = df1.fillna('')
 
     marketed = 0
