@@ -1103,6 +1103,7 @@ class PDF(FPDF):
           streamlit.write ("Scrapping limit exceeded")
           query_text = f"\n \n  Information on both efficacy and effectiveness of the product at the beginning of the reporting period is provided in the following. This information forms the basis for the benefit evaluation.Indications of {drug} are presented in Section 1.\n \n The following publications were received regarding the efficacy of DUMMYDRUG:\n"
           query_text = query_text 
+          summary_feedback =''
           metrics_df = pd.DataFrame()
 
       return query_text , metrics_df,summary_feedback
