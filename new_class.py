@@ -678,7 +678,7 @@ class PDF(FPDF):
 
 
         # Replace 'your_file_path/filtered_articles_PSURdate.csv' with the path to your CSV file
-        file_path = 'https://raw.githubusercontent.com/Snigdhab26/Capstone/main/filtered_articles_PSURdate.csv'
+        file_path = 'filtered_articles_PSURdate.csv'
         desired_filename = 'filtered_articles_PSURdate.csv'
         for f in filename:
             # Extract the filename from the full path
@@ -725,7 +725,7 @@ class PDF(FPDF):
 
       except Exception as e:
           print(f"Section 17 : {e}")
-          file_path = '/content/drive/MyDrive/ISB /Capstone/Data/Allopurinol/filtered_articles_PSURdate.csv'
+          file_path = 'filtered_articles_PSURdate.csv'
           filtered_df = pd.read_csv(file_path)
           filtered_df_cleaned = filtered_df.dropna(subset=['abstract'])
 
